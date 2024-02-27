@@ -1,12 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import AppIndex from './src/navigation/AppIndex';
+import { PaperProvider } from 'react-native-paper';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+     <SafeAreaView className="flex-1 ">
+
+    <PaperProvider>
+      <AppIndex/>
+
+    </PaperProvider>
+    </SafeAreaView>
   );
 }
 
