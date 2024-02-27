@@ -6,6 +6,7 @@ import HomeStack from '../main/home/HomeStack';
 import LikeStack from '../main/like/LikeStack';
 import ChatStack from '../main/chat/ChatStack';
 import ViewStack from '../main/view/ViewStack';
+import FavStack from '../main/fav/FavStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -37,6 +38,23 @@ export default function TabLayout({ navigation }) {
          tabBarActiveTintColor:`${colorScheme==="dark"?"#D7385E":"#FF6584"}`,
           tabBarInActiveTintColor:"gray",
 
+        }}
+      />
+       <Tab.Screen
+        name="FavStack"
+        component={FavStack}
+        options={{
+          title: 'Favourite',
+            headerShown:false,
+              tabBarIcon: ({ color,focused }) => (
+
+            focused?
+            <Fontisto name="favorite" size={24}   color={colorScheme=="light"?"#FF6584":"#D7385E"} />
+            :
+            <FontAwesome name="bookmark-o" size={24} color="black" />
+          ),
+            tabBarActiveTintColor:`${colorScheme==="dark"?"#D7385E":"#FF6584"}`,
+          tabBarInActiveTintColor:"gray",
         }}
       />
       <Tab.Screen

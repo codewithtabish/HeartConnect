@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Animated, Easing } from 'react-native';
+import { StyleSheet, Text, View, Animated, Easing, StatusBar } from 'react-native';
 import React, { useCallback, useEffect } from 'react';
 import { useFonts } from 'expo-font';
 import * as MySplashScreen from 'expo-splash-screen';
@@ -7,7 +7,7 @@ import { AntDesign } from '@expo/vector-icons'; // Import AntDesign for animated
 
 MySplashScreen.preventAutoHideAsync();
 
-const MainSplashScreen = ({ navigation }) => {
+const AuthSplashScreen = ({ navigation }) => {
   const [fontsLoaded, fontError] = useFonts({
     'outfit': require('../../../assets/fonts/Outfit-ExtraBold.ttf'),
     'outfit-semi': require('../../../assets/fonts/Outfit-SemiBold.ttf'),
@@ -45,7 +45,7 @@ const MainSplashScreen = ({ navigation }) => {
       await MySplashScreen.hideAsync();
     }
     setTimeout(() => {
-      navigation.replace("OnBoard"); // Navigate to HomeTab
+      navigation.navigate("OnBoard"); // Navigate to HomeTab
     }, 3000); // 3 seconds delay
   }, [fontsLoaded, fontError, navigation]);
 
@@ -81,11 +81,15 @@ const MainSplashScreen = ({ navigation }) => {
           </Text>
         </View>
       </View>
+             <StatusBar
+        backgroundColor="#FF6584"  // Set the background color
+        barStyle="light-content"   // Set the text color (light or dark content)
+      />
     </View>
   );
 }
 
-export default MainSplashScreen;
+export default AuthSplashScreen;
 
 const styles = StyleSheet.create({});
 

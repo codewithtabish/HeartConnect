@@ -3,7 +3,7 @@ import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/
 
 import TabLayout from './tab-navigator';
 import Modal from '../main/modal';
-import MainSplashScreen from '../auth/AuthSplashScreen/AuthSplashScreen';
+import MainSplashScreen from '../main/splah/MainSplashScreen';
 
 
 

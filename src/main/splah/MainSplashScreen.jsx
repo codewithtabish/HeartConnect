@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Animated, Easing } from 'react-native';
+import { StyleSheet, Text, View, Animated, Easing, StatusBar } from 'react-native';
 import React, { useCallback, useEffect } from 'react';
 import { useFonts } from 'expo-font';
 import * as MySplashScreen from 'expo-splash-screen';
@@ -45,7 +45,7 @@ const MainSplashScreen = ({ navigation }) => {
       await MySplashScreen.hideAsync();
     }
     setTimeout(() => {
-      navigation.replace("TabNavigator"); // Navigate to HomeTab
+      navigation.navigate("TabNavigator"); // Navigate to HomeTab
     }, 3000); // 3 seconds delay
   }, [fontsLoaded, fontError, navigation]);
 
@@ -78,9 +78,14 @@ const MainSplashScreen = ({ navigation }) => {
             style={{ fontFamily: "outfit" }}
             >
             Connecting Hearts, Creating Stories, Building Futures, Igniting Passions
+            Main
           </Text>
         </View>
       </View>
+         <StatusBar
+        backgroundColor="#FF6584"  // Set the background color
+        barStyle="light-content"   // Set the text color (light or dark content)
+      />
     </View>
   );
 }

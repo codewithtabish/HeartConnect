@@ -10,17 +10,14 @@ export default function App() {
 
     <PaperProvider>
       <AppIndex/>
+          <StatusBar
+        backgroundColor="#FF6584"  // Set the background color
+        barStyle="light-content"   // Set the text color (light or dark content)
+      />
+
 
     </PaperProvider>
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

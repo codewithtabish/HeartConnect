@@ -1,8 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
-import AuthSplashScreen from '../auth/AuthSplashScreen/AuthSplashScreen';
 import OnBoardScreen from '../auth/onboard/OnBoardScreen';
 import AuthWelcomeScreen from '../auth/welcome/AuthWelcomeScreen';
+import AuthSplashScreen from '../auth/AuthSplashScreen/AuthSplashScreen';
 
 
 
